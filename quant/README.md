@@ -1,5 +1,14 @@
 # 量化
 
+## 目录
+
+1. ccxtbt：币安api相关工具
+2. download：下载币安离线交易数据
+3. mail：邮件通知
+4. strategy：量化策略
+
+## 安装
+
 依赖安装参考：
 
 backtrader依赖：https://www.backtrader.com/docu/installation/
