@@ -5,7 +5,7 @@ import backtrader as bt
 from backtrader import Order
 import pandas as pd
 
-dataUrl = 'D:\学习\区块链\\biandata\%s\%sUSDT-1m-%s.csv'
+dataUrl = '~\data\%s\%sUSDT-1m-%s.csv'
 initCrash = 2500.0
 # 倍数
 crashMul = 20.0
@@ -188,7 +188,6 @@ def backt_strategy_run(coin, date):
     if buyTime != 0:
         print("成功率：%.2f%%" % (100.0 * successTime / buyTime))
 
-    # print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
     global total_profit
     total_profit += (cerebro.broker.getvalue() - walletCash)
     print('总收益：%.2f' % total_profit)
@@ -217,7 +216,7 @@ if __name__ == '__main__':
     print("%s,%s,%s,%.2f,%d,%d,%.2f%%,%.4f,%.4f" % (
         coin,
         '2021-05-2022-04',
-        '高成功率类型-high差值',
+        '均线低买高卖',
         total_profit,
         total_buyTime,
         total_successTime,
